@@ -86,7 +86,7 @@ width: 10px;
     );
     map.on('click', function(e) {
   var features = map.queryRenderedFeatures(e.point, {
-    layers: ['prises-commercialisables'] // replace this with the name of the layer
+    layers: ['prises-pro'] // replace this with the name of the layer
   });
   if (!features.length) {
     return;
@@ -100,11 +100,11 @@ width: 10px;
     .addTo(map);
 });
 // Change the cursor to a pointer when the mouse is over the prises-commercialisables layer.
-map.on('mouseenter', 'prises-commercialisables', function() {
+map.on('mouseenter', 'prises-pro', function() {
 map.getCanvas().style.cursor = 'pointer';
 });
 // Change it back to a pointer when it leaves.
-map.on('mouseleave', 'prises-commercialisables', function() {
+map.on('mouseleave', 'prises-pro', function() {
 map.getCanvas().style.cursor = '';
 });
 
@@ -260,7 +260,7 @@ Date des ouvertures commerciales
 <small>Source: <a href="http://essonnenumerique.com/"target="_blank">Essonne Numérique</a></small>
 </div>
  
-<div id="prises-commercialisables" class="legend2">
+<div id="prises-pro" class="legend2">
 Déploiement des bâtiments
 <div><span style="background-color: #2ac537"></span>éligible</div>
 <div><span style="background-color: #F79C0B"></span>en cours de déploiement</div>
